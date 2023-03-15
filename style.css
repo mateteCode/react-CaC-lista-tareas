@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: lightseagreen;
+  color: white;
+}
+
+.container {
+  width: 30%;
+  background-color: white;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+h1 {
+  color: darkslategrey;
+  text-align: center;
+}
+
+.inputDato {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tareaList {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+form {
+  display: flex;
+}
+
+input {
+  padding: 15px 10px;
+  width: 100%;
+  outline: none;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  background-color: lightgray;
+  margin-top: 5px;
+  color: black;
+  list-style-type: none;
+  width: 100%;
+  min-height: 100px;
+  position: relative;
+}
+
+li p {
+  padding: 10px;
+  display: flex;
+  width: 80%;
+}
+
+.btn-add {
+  padding: 5px 15px;
+  background-color: lightseagreen;
+  border: none;
+  color: white;
+  font-family: fantasy;
+  font-size: 1.4rem;
+  outline: none;
+}
+
+.btn-del {
+  padding: 5px;
+  background-color: lightcoral;
+  border: none;
+  color: white;
+  font-size: 0.6rem;
+  outline: none;
+  text-align: center;
+  border: 1px solid red;
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+  position: absolute;
+  right: 2px;
+  top: 2px;
+}
+
+.btn-add:hover {
+  cursor: pointer;
+  background-color: darkseagreen;
+}
+
+.btn-del:hover {
+  cursor: pointer;
+  background-color: darkred;
+}
+
+.empty {
+  color: darkslategrey;
+}
+
+.btn-delete {
+}
+
+.btn-delete:hover {
+}
+
+.li-container li {
+}
