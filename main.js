@@ -3,11 +3,6 @@ const createTaskBtn = document.querySelector(".btn-create-task");
 const taskInput = document.querySelector("textarea");
 const checkPriority = document.querySelector("#remember-me");
 
-//
-// const ul = document.querySelector("ul");
-// const empty = document.querySelector(".empty");
-// let tareas = 0;
-
 let taskList = [
   {
     name: "Para hacer",
@@ -68,24 +63,17 @@ createTaskBtn.addEventListener("click", (e) => {
   const text = taskInput.value;
   const priority = checkPriority.checked;
   if (text !== "") {
-    //const div = document.createElement("div");
-    //const p = document.createElement("p");
-    //const btnDel = document.createElement("button");
     const listIndex = document.querySelector("#taskListSelect").value;
     const parent = document.querySelector("#tasks" + listIndex);
-    //p.textContent = text;
-    //div.appendChild(p);
-    //div.appendChild(addDeleteBtn());
-    //div.className = "task";
     if (priority) {
       parent.insertBefore(addNewTask(text, priority), parent.firstChild);
     } else {
       parent.appendChild(addNewTask(text, priority));
     }
-
     taskInput.value = "";
-    //empty.style.display = "none";
     document.querySelector(".popup").classList.remove("active");
+    document.querySelector("#tasks" + listIndex + " .empty").style.display =
+      "none";
   }
 });
 
@@ -145,6 +133,9 @@ function addNewTask(text, priority) {
     const task = e.currentTarget.parentElement.parentElement;
     const parent = task.parentElement;
     parent.removeChild(task);
+    if (parent.querySelectorAll(".task").length == 0) {
+      parent.querySelector(".empty").style.display = "block";
+    }
   });
 
   divTaskMenu.appendChild(a1);
@@ -160,20 +151,6 @@ function addNewTask(text, priority) {
   divTask.style.backgroundColor = generateColor();
 
   return divTask;
-}
-
-function addDeleteBtn() {
-  const btnDel = document.createElement("button");
-  btnDel.textContent = "x";
-  btnDel.setAttribute("class", "btn-del");
-  //btnDel.className = "btn-del";
-  btnDel.addEventListener("click", (e) => {
-    ul.removeChild(e.currentTarget.parentElement);
-    /*     if (tareas == 0) {
-      empty.style = "block";
-    } */
-  });
-  return btnDel;
 }
 
 addTaskBtn.addEventListener("click", () => {

@@ -104,6 +104,7 @@ h1 {
   margin: 5px;
   padding: 10px 10px 0px 10px;
   height: fit-content;
+  box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.15);
 }
 
 .taskList h2 {
@@ -112,6 +113,14 @@ h1 {
 }
 
 .tasks {
+}
+
+.tasks .empty {
+  background-color: #e0e0e0;
+  background-color: white;
+  color: black;
+  margin: 10px 0;
+  padding: 10px;
 }
 
 .task {
@@ -132,6 +141,8 @@ h1 {
   right: 5px;
   top: 5px;
   display: flex;
+  width: 60px;
+  justify-content: space-between;
 }
 
 .taskMenu a {
@@ -159,10 +170,11 @@ h1 {
 
 .taskPriority {
   position: absolute;
-  left: 5px;
-  top: 5px;
+  left: 10px;
+  top: -5px;
   color: red;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
+  transform: rotate(45deg);
 }
 
 .inputDato {
@@ -325,6 +337,9 @@ li p {
   border: 1px solid #aaa;
   border-radius: 5px;
 }
+.popup .form .form-element textarea {
+  resize: none;
+}
 
 .popup .form .form-element input[type="checkbox"] {
   width: auto;
@@ -354,7 +369,6 @@ li p {
 @media (max-width: 800px) {
   .taskList {
     flex: 100%;
-    /*max-width: 600px;*/
   }
   h1 {
     font-size: 1.5rem;
