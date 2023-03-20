@@ -6,23 +6,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./style.css" />
+    <!-- <script src="https://kit.fontawesome.com/89331651f2.js" crossorigin="anonymous"></script> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
     <div class="container">
-      <h1>Lista de Tareas<Tarea></Tarea></h1>
-      <div class="inputDato">
-        <form action="">
-          <input type="text" placeholder="Agrega tu tarea pendiente..." />
-          <button class="btn-add">+</button>
-        </form>
+      <div class="header">
+        <h1>Listas de Tareas</h1>
+        <div class="headerMenu">
+          <a href="#" class="btn-conf-columns"></a>
+          <a href="#" class="btn-new-task"></a>
+        </div>
       </div>
-      <div class="li-container">
-        <ul></ul>
+      <div class="taskPanel">
+        <div class="taskList">
+          <h2>Para hacer</h2>
+          <div class="tasks" id="tasks0">
+          </div>  
+        </div>
+        <div class="taskList">
+          <h2>Haciendo</h2>
+          <div class="tasks" id="tasks1">
+            <div class="task">
+              <div class="taskPriority">
+                <i class="fa fa-thumb-tack" aria-hidden="true"></i>
+              </div>
+              <div class="taskMenu">
+                <a href="#"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-trash" aria-hidden="true"></i></a>
+              </div>
+              <p>Comprar repuesto de auto.</p>
+            </div>
+          </div> 
+        </div>
+        <div class="taskList">
+          <h2>En espera</h2>
+          <div class="tasks" id="tasks2">
+          </div> 
+        </div>
+        <div class="taskList">
+          <h2>Terminadas</h2>
+          <div class="tasks" id="tasks3">
+          </div> 
+        </div>
       </div>
-      <div class="empty">
-        <p>No tienes tareas pendientes.</p>
+
+      <div class="popup">
+        <div class="close-btn">&times;</div>
+        <div class="form">
+          <h2>Nueva tarea</h2>
+          <div class="form-element">
+            <label for="email">Tarea</label>
+            <textarea name="comments" rows="4" cols="50" maxlength="150"autofocus placeholder="Escribe tu tarea..." required wrap="hard"></textarea>
+          </div>
+          <div class="form-element">
+            <label for="taskListSelect">Seleccione una lista:</label>
+            <select name="taskListSelect" id="taskListSelect" required>
+            </select>
+          </div>
+          <div class="form-element">
+            <input type="checkbox" id="remember-me" />
+            <label for="remember-me">Urgente</label>
+          </div>
+          <div class="form-element">
+            <button class="btn-create-task">Agregar tarea</button>
+          </div>
+        </div>
       </div>
-    </div>
+      
     <script src="./main.js"></script>
   </body>
 </html>
