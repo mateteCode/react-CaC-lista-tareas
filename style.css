@@ -285,6 +285,7 @@ li p {
     transform 200ms ease-in-out 0ms;
 }
 
+/* Activa el formulario popup de nueva tarea*/
 .popup.active {
   top: 50%;
   opacity: 1;
