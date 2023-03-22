@@ -360,6 +360,10 @@ li p {
   background-color: green;
 }
 
+input[type="checkbox"] {
+  accent-color: green;
+}
+
 @media (max-width: 1200px) {
   .taskList {
     flex: 45%;
